@@ -5,7 +5,7 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 powershell_script "clean-workspace" do
-    command "${env:ProgramFiles(x86)}\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe /Clean"
+    command '& "${env:ProgramFiles(x86)}\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" /Clean'
     cwd '..\..\..\src'
 end
 
@@ -17,4 +17,10 @@ end
 powershell_script "build-solution" do
     command '& "${env:ProgramFiles(x86)}\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" ScriptServices.sln /Build debug /Out log.txt'
     cwd '..\..\..\src'
+end
+
+powershell_script "show-build-log" do
+    command "gc log.txt -raw"
+    cwd '..\..\..\src'
+    live_stream true
 end

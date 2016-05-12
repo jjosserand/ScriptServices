@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-src_dir = File.expand_path('../../src')
+src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}/src")
 
 powershell_script "clean-workspace" do
     code <<-EOH

@@ -1,0 +1,6 @@
+1>------ Build started: Project: ScriptServices, Configuration: Debug Any CPU ------
+
+Package 'Code Analysis Package' failed to load.
+1>  ScriptServices -> C:\dot-net\ScriptServices\src\ScriptServices\bin\Debug\ScriptServices.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+

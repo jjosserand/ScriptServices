@@ -13,7 +13,7 @@ end
 
 powershell_script "build-solution" do
     code <<-EOH
-        & "C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe" ScriptServices.sln /Build debug /Out log.txt
+        & "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe" ScriptServices.sln 
     EOH
     cwd src_dir
 end

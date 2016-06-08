@@ -13,7 +13,7 @@ end
 
 powershell_script "build-solution" do
     code <<-EOH
-        & "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe" ScriptServices.sln /t:go /fl /flp:logFile=ScriptServices.build.log
+        & "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe" ScriptServices.sln /fl /flp:logFile=ScriptServices.build.log
     EOH
     cwd src_dir
 end
